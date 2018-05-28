@@ -1,6 +1,8 @@
 module.exports = [
 	{
-		entry: {},
+		entry: {
+			"settings": "./app/views/admin/settings.js"
+		},
 		output: {
 			filename: "./app/bundle/[name].js"
 		},
