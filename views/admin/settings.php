@@ -1,4 +1,5 @@
-<?php $view->script('settings', 'spqr/eventlist:app/bundle/settings.js',
+<?php $view->script('admin-settings',
+    'spqr/eventlist:app/bundle/admin/settings.js',
     ['vue']); ?>
 
 <div id="settings" class="uk-form uk-form-horizontal" v-cloak>

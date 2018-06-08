@@ -12,26 +12,22 @@ return [
         'Spqr\\Eventlist\\' => 'src',
     ],
     
-    'nodes'  => [
-        'eventlist' => [
-            'name'       => '@eventlist',
-            'label'      => 'Eventlist',
-            'controller' => 'Spqr\\Eventlist\\Controller\\SiteController',
-            'protected'  => true,
-            'frontpage'  => false,
-        ],
-    ],
+    'nodes' => [],
+    
     'routes' => [
         '/eventlist'     => [
             'name'       => '@eventlist',
             'controller' => [
                 'Spqr\\Eventlist\\Controller\\EventlistController',
+                'Spqr\\Eventlist\\Controller\\EventController',
+                'Spqr\\Eventlist\\Controller\\CategoryController',
             ],
         ],
         '/api/eventlist' => [
             'name'       => '@eventlist/api',
             'controller' => [
                 'Spqr\\Eventlist\\Controller\\EventApiController',
+                'Spqr\\Eventlist\\Controller\\CategoryApiController',
             ],
         ],
     ],
@@ -47,11 +43,19 @@ return [
         ],
         'eventlist: events'   => [
             'parent' => 'eventlist',
-            'label'  => 'Targets',
+            'label'  => 'Events',
             'icon'   => 'spqr/eventlist:icon.svg',
             'url'    => '@eventlist/event',
             'access' => 'eventlist: manage events',
-            'active' => '@eventlist/target*',
+            'active' => '@eventlist/event*',
+        ],
+        'eventlist: category' => [
+            'parent' => 'eventlist',
+            'label'  => 'Categories',
+            'icon'   => 'spqr/eventlist:icon.svg',
+            'url'    => '@eventlist/category',
+            'access' => 'eventlist: manage categories',
+            'active' => '@eventlist/category*',
         ],
         'eventlist: settings' => [
             'parent' => 'eventlist',
@@ -62,11 +66,14 @@ return [
     ],
     
     'permissions' => [
-        'eventlist: manage settings' => [
+        'eventlist: manage settings'   => [
             'title' => 'Manage settings',
         ],
-        'eventlist: manage events'   => [
-            'title' => 'Manage targets',
+        'eventlist: manage events'     => [
+            'title' => 'Manage events',
+        ],
+        'eventlist: manage categories' => [
+            'title' => 'Manage categories',
         ],
     ],
     
