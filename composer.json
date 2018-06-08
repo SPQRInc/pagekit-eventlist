@@ -3,7 +3,7 @@
   "module": "spqr/eventlist",
   "version": "0.0.1",
   "type": "pagekit-extension",
-  "title": "Linker",
+  "title": "Eventlist",
   "description": "Adds an eventlist to Pagekit",
   "license": "MIT",
   "authors": [
