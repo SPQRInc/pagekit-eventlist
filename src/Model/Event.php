@@ -58,8 +58,8 @@ class Event implements \JsonSerializable
         ];
     
     /**
-     * @ManyToMany(targetEntity="Category", tableThrough="@classifieds_classified_category",
-     *                                      keyThroughFrom="classified_id",
+     * @ManyToMany(targetEntity="Category", tableThrough="@eventlist_event_category",
+     *                                      keyThroughFrom="event_id",
      *                                      keyThroughTo="category_id")
      */
     public $category;

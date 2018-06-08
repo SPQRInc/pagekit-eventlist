@@ -40,7 +40,7 @@ class EventApiController
                 ], ['search' => "%{$search}%"]);
             });
         }
-        if (preg_match('/^(title)\s(asc|desc)$/i', $order, $match)) {
+        if (preg_match('/^(date)\s(asc|desc)$/i', $order, $match)) {
             $order = $match;
         } else {
             $order = [1 => 'title', 2 => 'asc'];
