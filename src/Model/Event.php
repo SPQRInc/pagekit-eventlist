@@ -28,7 +28,8 @@ class Event implements \JsonSerializable
     /** @var array */
     protected static $properties
         = [
-            'published' => 'isPublished',
+            'published'  => 'isPublished',
+            'accessible' => 'isAccessible',
         ];
     
     /** @Column(type="integer") @Id */
@@ -124,6 +125,16 @@ class Event implements \JsonSerializable
             self::STATUS_UNPUBLISHED    => __('Unpublished'),
             self::STATUS_DRAFT          => __('Draft'),
         ];
+    }
+    
+    /**
+     * @param \Pagekit\User\Model\User|null $user
+     *
+     * @return bool
+     */
+    public function isAccessible(User $user = null)
+    {
+        return $this->isPublished();
     }
     
     /**
