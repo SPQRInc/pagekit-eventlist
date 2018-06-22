@@ -20,7 +20,7 @@ class SiteController
     {
         $query = Event::where(['status = ?'], [
             Event::STATUS_PUBLISHED,
-        ]); //TODO: Datum mit einfließen lassen
+        ]);
         
         foreach ($events = $query->get() as $event) {
             $event->content = App::content()->applyPlugins($event->content, [
@@ -43,7 +43,7 @@ class SiteController
     }
     
     /**
-     * @Route("/details/{id}", name="events-details")
+     * @Route("/{id}", name="id")
      * @Access("events: view events")
      */
     public function detailsAction($id = '')
