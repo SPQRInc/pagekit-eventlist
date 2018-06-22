@@ -7,7 +7,7 @@ use Pagekit\System\Model\DataModelTrait;
 use Pagekit\User\Model\User;
 
 /**
- * @Entity(tableClass="@eventlist_event")
+ * @Entity(tableClass="@eventlist_event", eventPrefix="eventlist.event")
  */
 class Event implements \JsonSerializable
 {

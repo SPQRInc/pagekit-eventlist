@@ -1,6 +1,7 @@
 <?php
 
 use Pagekit\Application;
+use Spqr\Eventlist\Event\RouteListener;
 
 return [
     'name' => 'spqr/eventlist',
@@ -97,6 +98,7 @@ return [
     
     'events' => [
         'boot'         => function ($event, $app) {
+            $app->subscribe(new RouteListener);
         },
         'site'         => function ($event, $app) {
         },

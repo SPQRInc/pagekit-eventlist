@@ -6,7 +6,7 @@ use Pagekit\Application as App;
 use Pagekit\User\Model\User;
 
 /**
- * @Entity(tableClass="@eventlist_category")
+ * @Entity(tableClass="@eventlist_category", eventPrefix="eventlist.category")
  */
 class Category implements \JsonSerializable
 {
