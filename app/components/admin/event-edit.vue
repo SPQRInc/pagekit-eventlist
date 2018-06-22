@@ -7,6 +7,13 @@
                 <p class="uk-form-help-block uk-text-danger"
                    v-show="form.title.invalid">{{ 'Title cannot be blank.' | trans }}</p>
             </div>
+            <div class="uk-form-row">
+                <label for="form-content" class="uk-form-label">{{ 'Content' | trans }}</label>
+                <div class="uk-form-controls">
+                    <v-editor id="form-content" :value.sync="event.content"
+                              :options="{markdown : event.data.markdown, height: 250}"></v-editor>
+                </div>
+            </div>
         </div>
         <div class="pk-width-sidebar">
             <div class="uk-panel">
@@ -49,6 +56,13 @@
                     <label for="form-price" class="uk-form-label">{{ 'Price' | trans }}</label>
                     <div class="uk-form-controls">
                         <price-selector id="form-price" :price.sync="event.price"></price-selector>
+                    </div>
+                </div>
+                <div class="uk-form-row">
+                    <span class="uk-form-label">{{ 'Options' | trans }}</span>
+                    <div class="uk-form-controls">
+                        <label><input type="checkbox" v-model="event.data.markdown"
+                                      value="1"> {{ 'Enable Markdown' | trans }}</label>
                     </div>
                 </div>
             </div>

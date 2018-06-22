@@ -46,6 +46,9 @@ class Event implements \JsonSerializable
     /** @Column(type="string") */
     public $title;
     
+    /** @Column(type="string") */
+    public $content = '';
+    
     /** @Column(type="json_array") */
     public $performer;
     

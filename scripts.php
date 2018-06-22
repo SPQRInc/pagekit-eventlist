@@ -25,6 +25,7 @@ return [
                 $table->addColumn('status', 'smallint');
                 $table->addColumn('slug', 'string', ['length' => 255]);
                 $table->addColumn('title', 'string', ['length' => 255]);
+                $table->addColumn('content', 'text');
                 $table->addColumn('price', 'float', [
                     'unsigned' => true,
                     'length'   => 10,
