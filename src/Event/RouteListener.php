@@ -3,7 +3,7 @@
 namespace Spqr\Eventlist\Event;
 
 use Pagekit\Application as App;
-use Spqr\Eentlist\UrlResolver;
+use Spqr\Eventlist\UrlResolver;
 use Pagekit\Event\EventSubscriberInterface;
 
 class RouteListener implements EventSubscriberInterface
