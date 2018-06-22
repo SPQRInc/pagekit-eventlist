@@ -32,7 +32,7 @@ class SiteController
         return [
             '$view'  => [
                 'title' => App::node()->title ? : __('Eventlist'),
-                'name'  => 'spqr/events:views/event-index.php',
+                'name'  => 'spqr/eventlist:views/event-index.php',
             ],
             '$data'  => [
                 'config' => App::module('spqr/eventlist')->config(),
@@ -75,7 +75,7 @@ class SiteController
         return [
             '$view' => [
                 'title'          => $event->title ? : __('Eventlist'),
-                'name'           => 'spqr/events:views/event-details.php',
+                'name'           => 'spqr/eventlist:views/event-details.php',
                 'og:title'       => $event->title,
                 'og:description' => $description,
             ],
