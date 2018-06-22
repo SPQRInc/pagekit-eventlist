@@ -18,7 +18,7 @@ return [
             'name'       => '@eventlist',
             'label'      => 'Eventlist',
             'controller' => 'Spqr\\Eventlist\\Controller\\SiteController',
-            'protected'  => false,
+            'protected'  => true,
             'frontpage'  => true,
         ],
     ],
@@ -30,6 +30,7 @@ return [
                 'Spqr\\Eventlist\\Controller\\EventlistController',
                 'Spqr\\Eventlist\\Controller\\EventController',
                 'Spqr\\Eventlist\\Controller\\CategoryController',
+                'Spqr\\Eventlist\\Controller\\SiteController',
             ],
         ],
         '/api/eventlist' => [
