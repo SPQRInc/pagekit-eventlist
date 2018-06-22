@@ -7,13 +7,6 @@
 		<div class="uk-flex uk-flex-middle uk-flex-wrap" data-uk-margin>
 			<h2 class="uk-margin-remove">{{ 'Events' | trans }}</h2>
 		</div>
-		<div data-uk-margin>
-			<div class="uk-search">
-				<input class="uk-search-field" type="text"
-				       placeholder="{{ 'Search' | trans }}"
-				       v-model="config.filter.search" debounce="300">
-			</div>
-		</div>
 	</div>
 	<div class="uk-overflow-container">
 		<table class="uk-table uk-table-hover uk-table-striped uk-table-middle uk-table-condensed">
