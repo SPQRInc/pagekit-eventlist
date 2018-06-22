@@ -20,7 +20,7 @@ class SiteController
     {
         $query = Event::where(['status = ?'], [
             Event::STATUS_PUBLISHED,
-        ]);
+        ])->orderBy('date', 'ASC');
         
         foreach ($events = $query->get() as $event) {
             $event->content = App::content()->applyPlugins($event->content, [
@@ -49,8 +49,8 @@ class SiteController
     public function detailsAction($id = '')
     {
         if (!$event
-            = Event::where(['id = ?', 'status = ?', 'date < ?'],
-            [$id, Event::STATUS_PUBLISHED, new \DateTime])->first()
+            = Event::where(['id = ?', 'status = ?'],
+            [$id, Event::STATUS_PUBLISHED])->first()
         ) {
             App::abort(404, __('Event not found!'));
         }
