@@ -10,18 +10,18 @@ return [
         $util = $app['db']->getUtility();
         if ($util->tableExists('@eventlist_event') === false) {
             $util->createTable('@eventlist_event', function ($table) {
-            
+    
                 $table->addColumn('id', 'integer', [
                     'unsigned'      => true,
                     'length'        => 10,
                     'autoincrement' => true,
                 ]);
-            
+    
                 $table->addColumn('category_id', 'integer', [
                     'length'  => 10,
                     'default' => 0,
                 ]);
-            
+    
                 $table->addColumn('status', 'smallint');
                 $table->addColumn('slug', 'string', ['length' => 255]);
                 $table->addColumn('title', 'string', ['length' => 255]);
