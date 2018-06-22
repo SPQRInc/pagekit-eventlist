@@ -12,7 +12,15 @@ return [
         'Spqr\\Eventlist\\' => 'src',
     ],
     
-    'nodes' => [],
+    'nodes' => [
+        'eventlist' => [
+            'name'       => '@eventlist',
+            'label'      => 'Eventlist',
+            'controller' => 'Spqr\\Eventlist\\Controller\\SiteController',
+            'protected'  => false,
+            'frontpage'  => true,
+        ],
+    ],
     
     'routes' => [
         '/eventlist'     => [
@@ -93,6 +101,8 @@ return [
         'site'         => function ($event, $app) {
         },
         'view.scripts' => function ($event, $scripts) use ($app) {
+            $scripts->register('link',
+                'spqr/eventlist:app/bundle/admin/link.js', '~panel-link');
         },
     ],
 ];

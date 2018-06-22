@@ -1,6 +1,7 @@
 module.exports = [
 	{
 		entry: {
+			"admin/link": "./app/components/admin/link.vue",
 			"admin/settings": "./app/views/admin/settings.js",
 			"admin/event-index": "./app/views/admin/event-index",
 			"admin/event-edit": "./app/views/admin/event-edit",
