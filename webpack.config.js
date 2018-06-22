@@ -7,6 +7,7 @@ module.exports = [
 			"admin/event-edit": "./app/views/admin/event-edit",
 			"admin/category-index": "./app/views/admin/category-index",
 			"admin/category-edit": "./app/views/admin/category-edit",
+			"event-index": "./app/views/event-index"
 		},
 		output: {
 			filename: "./app/bundle/[name].js"
