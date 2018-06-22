@@ -1,7 +1,7 @@
 {
   "name": "spqr/eventlist",
   "module": "spqr/eventlist",
-  "version": "0.0.1",
+  "version": "0.0.13",
   "type": "pagekit-extension",
   "title": "Eventlist",
   "description": "Adds an eventlist to Pagekit",
