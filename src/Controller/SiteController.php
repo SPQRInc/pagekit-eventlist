@@ -35,10 +35,10 @@ class SiteController
                 'name'  => 'spqr/events:views/event-index.php',
             ],
             '$data'  => [
-                'config' => App::module('spqr/events')->config(),
+                'config' => App::module('spqr/eventlist')->config(),
                 'events' => array_values($events),
             ],
-            'config' => App::module('spqr/events')->config(),
+            'config' => App::module('spqr/eventlist')->config(),
         ];
     }
     
@@ -80,7 +80,7 @@ class SiteController
                 'og:description' => $description,
             ],
             '$data' => [
-                'config' => App::module('spqr/events')->config(),
+                'config' => App::module('spqr/eventlist')->config(),
                 'event'  => $event,
             ],
             'event' => $event,
