@@ -85,6 +85,9 @@ return [
         'eventlist: manage categories' => [
             'title' => 'Manage categories',
         ],
+        'eventlist: view events'       => [
+            'title' => 'View events',
+        ],
     ],
     
     'settings' => '@eventlist/settings',
@@ -106,6 +109,10 @@ return [
         'view.scripts' => function ($event, $scripts) use ($app) {
             $scripts->register('link',
                 'spqr/eventlist:app/bundle/admin/link.js', '~panel-link');
+            $scripts->register('event-performer',
+                'spqr/eventlist:app/bundle/admin/event-performer.js',
+                '~admin-event-edit');
+            
         },
     ],
 ];
