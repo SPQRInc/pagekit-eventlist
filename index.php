@@ -97,7 +97,25 @@ return [
     ],
     
     'config' => [
-        'items_per_page' => 20,
+        'items_per_page'    => 20,
+        'sidebar_class'     => 'uk-panel-box uk-panel-header',
+        'socialmedia_icons' => [
+            [
+                'title'      => 'facebook',
+                'href_class' => '',
+                'icon'       => 'uk-icon-facebook',
+            ],
+            [
+                'title'      => 'twitter',
+                'href_class' => '',
+                'icon'       => 'uk-icon-twitter',
+            ],
+            [
+                'title'      => 'youtube',
+                'href_class' => '',
+                'icon'       => 'uk-icon-youtube',
+            ],
+        ],
     ],
     
     'events' => [
