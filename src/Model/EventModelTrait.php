@@ -32,4 +32,18 @@ trait EventModelTrait
         }
     }
     
+    /**
+     * @return array
+     */
+    public function getPerformer()
+    {
+        if ($this->performer) {
+            return array_values(array_map(function ($performer) {
+                    return $performer;
+                }, $this->performer));
+        }
+        
+        return [];
+    }
+    
 }

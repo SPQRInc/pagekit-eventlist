@@ -152,7 +152,9 @@ class Event implements \JsonSerializable
     public function jsonSerialize()
     {
         $data = [
-            'url' => App::url('@eventlist/id', ['id' => $this->id], 'base'),
+            'url'       => App::url('@eventlist/id', ['id' => $this->id],
+                'base'),
+            'performer' => $this->getPerformer(),
         ];
     
         return $this->toArray($data);

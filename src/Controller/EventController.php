@@ -71,6 +71,7 @@ class EventController
                     'event'      => $event,
                     'statuses'   => Event::getStatuses(),
                     'categories' => Event::getCategories(),
+                    'config'     => $module->config(),
                 ],
             ];
         } catch (\Exception $e) {
